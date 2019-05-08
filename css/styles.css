@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700,900');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 70em;
+}
+
+/* typography */
+
+.title {
+	font-size: 1.5rem;
+}
+
+.title span {
+	font-family: 'Pacifico', cursive;
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 2.5rem;
+}
+
+/* buttons */
+
+.button {
+	display: inline-block;
+	font-size: 1.1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	padding: .5rem 1.5rem;
+}
+
+.button-accent {
+	color: #6EFFFF;
+	border-color: #6EFFFF;
+}
+
+.button-accent:hover, .button-accent:focus {
+	background: #6EFFFF;
+	color: #232323;
+}
+
+/* header */
+
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 2em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a {
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .8rem;
+	padding: .5em;
+	color: powderblue
+}
+
+nav a:hover, nav a:focus {
+	color: #67848C;
+}
+
+@media (min-width: 60rem) {
+	.title span {
+		float: left;
+	}
+	
+	nav {
+		float: right;
+	}
+}
+
+/* home */
+
+.home {
+	background-image: url(../img/home-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 12em 0;
+	color: #FFFFFF
+}
+
+.home-about {
+	margin-top: 2rem;
+}
+
+.home-about-text {
+	background-color: #232323;
+	padding: 4em;
+	padding-top: 2.5em;
+}
+
+.home-about-text h1 {
+	margin-top: 0;
+	color: powderblue;
+}
+
+.home-about-text p {
+	color: aliceblue;
+	text-align: justify;
+}
+
+.home-about-text a {
+	text-decoration: none;
+	color: springgreen;
+}
+
+.home-about-text a:hover, .home-about-text a:focus {
+	color:teal
+}
+
+.home-about-text hr {
+	height: 2px;
+	border: 0;
+	width: 25%;
+	border-top: 2px solid powderblue;
+}
+
+@media (min-width: 60rem) {
+	.home-about {
+		background-image: url("../img/aboutme.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 90%;
+		padding-bottom: 5em;
+		padding-right: 10em;
+	}
+	
+	.home-about-text {
+		width: 50%;
+		box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.3);
+		top: -5em;
+		left: -5em;
+	}
+}
+
