@@ -9,11 +9,20 @@ body {
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
+	overflow-x: hidden;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+hr {
+	height: 2px;
+	border: 0;
+	width: 5%;
+	border-top: 2px solid white;
+	padding-bottom: 1em;
 }
 
 .container {
@@ -33,12 +42,13 @@ img {
 	font-family: 'Pacifico', cursive;
 	font-size: 2.5rem;
 	font-weight: 400;
-	color: #FFFFFF;
+	color: #FFF;
+	float: left;
 }
 
 @media (max-width: 30rem) {
 	.title span {
-		font-size: 1.5rem
+		font-size: 2rem
 	}
 }
 
@@ -61,7 +71,7 @@ h1 {
 	border-color: powderblue;
 }
 
-.button:hover, .button:focus {
+.button:hover {
 	background: powderblue;
 	color: black;
 	transition: all ease-in-out 250ms;
@@ -70,10 +80,9 @@ h1 {
 .button-accent {
 	color: darkcyan;
 	border-color: darkcyan;
-	margin-top: 2em
 }
 
-.button-accent:hover, .button-accent:focus {
+.button-accent:hover {
 	background: darkcyan;
 	color: white;
 	transition: all ease-in-out 250ms;
@@ -85,7 +94,20 @@ header {
 	position: absolute;
 	left: 0;
 	right: 0;
-	margin: 2em;
+}
+
+header .title span {
+	margin-top: 1em;
+	margin-left: 2em;
+}
+
+nav {
+	position: relative;
+	z-index: 500;
+	text-align: left;
+	float: right;
+	right: 2em;
+	top: 3em;
 }
 
 nav ul {
@@ -95,38 +117,120 @@ nav ul {
 }
 
 nav li {
+	margin: 1em;
 	display: inline-block;
-	margin: .2em;
 }
 
 nav a {
 	font-weight: 900;
 	text-decoration: none;
 	text-transform: uppercase;
+	padding: .5em;
 	font-size: .8rem;
-	padding: .2em;
 	color: powderblue
 }
 
-nav a:hover, nav a:focus {
-	color: #67848C;
+nav a:hover, nav a:focus, .active {
+	color:cadetblue;
+	transition: all ease-in-out 250ms;
 }
 
-@media (min-width: 60rem) {
-	.title span {
-		float: left;
+.menu {
+	display: none;
+}
+
+.nav-mobile {
+	display: none;
+}
+
+.menu div {
+	width: 1.3em;
+	height: 0.14em;
+	background-color: powderblue;
+	margin: 0.3em;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: right;
+	padding-right: 2em;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+	width: 100%;
+	transition: background-image ease-in-out 250ms;
+}
+
+@media (max-width: 60rem) {
+	.nav-links {
+		position: fixed;
+		background-color: rgba(0,0,0,0.9);
+		padding: 4em;
+		right: 0em;
+		top: 2.6em;
+		height: 110vh;
+		width: 60vw;
+		transform: translateX(100%);
+		transition: transform 250ms ease-in-out;
 	}
-	
-	nav {
-		float: right;
-	}
-	
-	nav a {
-		padding: .5em
-	}
-	
+
 	nav li {
-		margin: 1em;
+		margin-bottom: 6vw;
+		margin-right: 1em;
+		display: inherit;
+	}
+
+	nav a {
+		padding: .2em;
+		font-size: inherit;
+	}
+	
+	.title {
+		margin-top: 2em;
+	}
+	
+	.title span {
+		position: absolute;
+		left: -2em;
+		right: 0;
+	}
+	
+	.menu {
+		z-index: 100;
+		display: block;
+		cursor: pointer;
+		padding-right: 0.7em;
+	}
+	
+	.menu div {
+		transition: all 250ms ease-in-out;
+	}
+
+	.nav-mobile {
+		z-index: 500;
+		position: fixed;
+		display: flex;
+		top: 0;
+		width: 100%;
+		padding: 0.5em;
+		justify-content: flex-end;
+		background-color: rgba(0,0,0,0.9);
+	}
+	
+	.nav-active {
+		transform: translateX(0%);
+	}
+	
+	.menu-toggle .line1 {
+		transform: rotate(-45deg) translate(-5px, 5px);
+	}
+	
+	.menu-toggle .line2 {
+		opacity: 0;
+	}
+	
+	.menu-toggle .line3 {
+		transform: rotate(45deg) translate(-5px, -5px);
 	}
 }
 
@@ -166,13 +270,12 @@ nav a:hover, nav a:focus {
 	color: springgreen;
 }
 
-.home-about-text a:hover, .home-about-text a:focus {
-	color:teal
+.home-about-text a:hover {
+	color: teal;
+	transition: all ease-in-out 250ms;
 }
 
 .home-about-text hr {
-	height: 2px;
-	border: 0;
 	width: 25%;
 	border-top: 2px solid powderblue;
 }
@@ -188,10 +291,11 @@ nav a:hover, nav a:focus {
 	}
 	
 	.home-about-text {
+		position: relative;
 		width: 50%;
 		box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
-		top: -5em;
-		left: -5em;
+		top: -0.3em;
+		left: -1em;
 	}
 }
 
@@ -202,14 +306,17 @@ nav a:hover, nav a:focus {
 	margin-bottom: 0;
 	padding: 1em;
 	padding-bottom: 5em;
+	background-color: #232323;
+	color: powderblue;
 }
 
 .portfolio hr {
-	height: 2px;
-	border: 0;
-	width: 5%;
-	border-top: 2px solid black;
-	padding-bottom: 1em;
+	border-top-color: powderblue;
+	width: 7rem;
+}
+
+.portfolio .button {
+	margin-top: 2em;
 }
 
 .portfolio-section {
@@ -228,7 +335,7 @@ nav a:hover, nav a:focus {
 
 .portfolio-desc {
 	position: absolute;
-	z-index: 100;
+	z-index: 50;
 	bottom: 0em;
 	left: 0em;
 	right: 0em;
@@ -246,8 +353,8 @@ nav a:hover, nav a:focus {
 	}
 	
 	.portfolio img {
-		width: 600px;
-		height: 300px;
+		width: 30em;
+		height: 15em;
 	}
 }
 
@@ -267,8 +374,8 @@ nav a:hover, nav a:focus {
 	}
 	
 	.portfolio img {
-		width: 600px;
-		height: 400px;
+		width: 30em;
+		height: 20em;
 	}
 }
 
@@ -276,9 +383,60 @@ figure {
 	margin: 0;
 }
 
+/* experience */
+
+.experience {
+	margin-top: 2em;
+}
+
+.experience h1 {
+	margin-top: 0;
+	color: powderblue;
+}
+
+.experience hr {
+	width: 25%;
+	border-top: 2px solid powderblue;
+}
+
+.experience p {
+	text-align: left;
+}
+
+.experience-text {
+	background-color: #232323;
+	padding: 4em;
+	padding-top: 2.5em;
+	color: white;
+}
+
+.experience .button {
+	margin-top: 1em;
+}
+
+@media (min-width: 60rem) {
+	.experience {
+		background-image: url("../img/experience-bg.JPG");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 90%;
+		height: 40em;
+		margin: 4em;
+	}
+	
+	.experience-text {
+		position: relative;
+		width: 50%;
+		box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
+		left: -2em;
+		bottom: -14em;
+	}
+}
+
 /* cta */
 
 .cta {
+	margin-top: 2em;
 	background-color: #232323;
 	padding: 2em 0;
 	padding-bottom: 4em;
@@ -288,19 +446,23 @@ figure {
 /* footer */
 
 footer {
-	margin: 3rem;
+	padding: 1em;
+}
+
+footer p {
+	margin-bottom: 0;
 }
 
 footer nav {
 	margin-bottom: 3rem;
+	z-index: 100;
 }
 
 footer nav li {
 	margin: 0.75em;
+	display: inline-block;
 }
 
 footer img {
-	width: 1.2vw;
+	width: 1.75rem;
 }
-
-
