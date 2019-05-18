@@ -12,26 +12,11 @@ Created May 6th, 2019
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Bruce Nguyen</title>
-		<link href="css\styles.css" rel="stylesheet" type="text/css">
-		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 		
-		<script type="text/javascript">
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 60 && $(window).width() >= 960) {
-					$('.navbar').addClass("sticky");
-				}
-				else {
-					$('.navbar').removeClass("sticky");
-				}
-			})
-			
-			const navSlide = () => {
-				const menu = document.querySelector('.menu');
-				const nav = document.querySelector('.nav-links');
-				nav.classList.toggle('nav-active');
-				menu.classList.toggle('menu-toggle');
-			}
-		</script>
+		<link href="css\styles.css" rel="stylesheet" type="text/css">
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</head>
 	
 	<body>
@@ -93,7 +78,7 @@ Created May 6th, 2019
 			<hr><br>
 			
 			<figure class="portfolio-section">
-				<img src="img/portfolio-software.jpg" alt="Software">
+				<img src="img/portfolio/graph.JPG" alt="Software">
 				<figcaption class="portfolio-desc">
 					<h4>Software</h4>
 					<p>I have worked on projects relating to various areas of software development.</p>
@@ -101,7 +86,7 @@ Created May 6th, 2019
 			</figure>
 			
 			<figure class="portfolio-section">
-				<img src="img/portfolio-eng.jpg" alt="Engineering">
+				<img src="img/portfolio/bridge.jpg" alt="Engineering">
 				<figcaption class="portfolio-desc">
 					<h4>Engineering</h4>
 					<p>As a computer engineering student, I have worked on several engineering-related projects.</p>
@@ -109,7 +94,7 @@ Created May 6th, 2019
 			</figure>
 			
 			<figure class="portfolio-section">
-				<img src="img/portfolio-design.jpg" alt="Design">
+				<img src="img/portfolio/rey.jpg" alt="Design">
 				<figcaption class="portfolio-desc">
 					<h4>Art &amp; Design</h4>
 					<p>Art is one of my creative outlets and over the years I have accumulated multiple works, including graphics design pieces.</p>
@@ -117,13 +102,13 @@ Created May 6th, 2019
 			</figure>
 			
 			<figure class="portfolio-section">
-				<img src="img/portfolio-film.jpg" alt="Film">
+				<img src="img/portfolio/mooning.jpg" alt="Film">
 				<figcaption class="portfolio-desc">
 					<h4>Film</h4>
 					<p>I am not the best filmmaker but I love doing it. Over the past few years, I've worked with great people and had a fun time.</p>
 				</figcaption>
 			</figure>
-			<a href="" class="button">View my work</a>
+			<a href="portfolio.html" class="button">View my work</a>
 		</section>
 		
 		<div class="container">
@@ -135,7 +120,7 @@ Created May 6th, 2019
 						Through my enrollment in the University of Waterloo's co-op program, I've had the 
 						opportunity to work in professional environments and gained valuable work experience.
 					</p>
-					<a href="portfolio.html" class="button">Read more</a>
+					<a href="experience.html" class="button">Read more</a>
 				</div>
 			</section>
 		</div>
@@ -143,7 +128,7 @@ Created May 6th, 2019
 		<section class="cta">
 			<div class="container">
 				<h1 class="title">Have any questions?</h1>
-				<a href="" class="button">Contact</a>
+				<a href="contact.html" class="button">Contact</a>
 			</div>
 		</section>
 		
