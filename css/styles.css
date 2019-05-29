@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Poppins:300,400,700,900');
 
 * {
 	box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 body {
 	margin: 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	overflow-x: hidden;
 }
@@ -73,7 +73,7 @@ hr {
 	font-family: 'Pacifico', cursive;
 	font-size: 2.5rem;
 	font-weight: 400;
-	color: #FFF;
+	color: crimson;
 	float: left;
 }
 
@@ -92,24 +92,24 @@ h1 {
 	border-width: 2px;
 	border-style: solid;
 	padding: .5rem 1.5rem;
-	color: powderblue;
-	border-color: powderblue;
+	color: #D90051;
+	border-color: #D90051;
 }
 
 .button:hover {
-	background: powderblue;
-	color: black;
+	background: #D90051;
+	color: white;
 	transition: all ease-in-out 250ms;
 }
 
 .button-accent {
-	color: darkcyan;
-	border-color: darkcyan;
+	color: azure;
+	border-color: azure;
 }
 
 .button-accent:hover {
-	background: darkcyan;
-	color: white;
+	background: azure;
+	color: crimson;
 	transition: all ease-in-out 250ms;
 }
 
@@ -147,16 +147,16 @@ nav li {
 }
 
 nav a {
-	font-weight: 900;
+	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: .5em;
 	font-size: .8rem;
-	color: powderblue
+	color: azure;
 }
 
 nav a:hover, nav a:focus, .active {
-	color:cadetblue;
+	color: crimson;
 	transition: all ease-in-out 250ms;
 }
 
@@ -171,7 +171,7 @@ nav a:hover, nav a:focus, .active {
 .menu div {
 	width: 1.3em;
 	height: 0.14em;
-	background-color: powderblue;
+	background-color: white;
 	margin: 0.3em;
 }
 
@@ -275,34 +275,38 @@ nav a:hover, nav a:focus, .active {
 }
 
 .home-about-text {
-	background-color: #232323;
+	background-color: #0E0E0E;
 	padding: 3em;
 	padding-top: 2.5em;
 }
 
 .home-about-text h1 {
 	margin-top: 0;
-	color: powderblue;
+	font-weight: 400;
+	color: crimson;
 }
 
 .home-about-text p {
 	color: aliceblue;
 	text-align: left;
+	font-size: 0.9em;
 }
 
 .home-about-text a {
 	text-decoration: none;
-	color: springgreen;
+	color: pink;
 }
 
 .home-about-text a:hover {
-	color: teal;
+	color: crimson;
+	text-decoration: underline;
 	transition: all ease-in-out 250ms;
 }
 
 .home-about-text hr {
-	width: 25%;
-	border-top: 2px solid powderblue;
+	width: 20%;
+	border-top: 2px solid crimson;
+	opacity: 0.3;
 }
 
 @media (min-width: 60rem) {
@@ -330,13 +334,18 @@ nav a:hover, nav a:focus, .active {
 	margin: 3em 0;
 	padding: 1em;
 	padding-bottom: 5em;
-	background-color: #232323;
-	color: powderblue;
+	background-color: #0E0E0E;
+	color: crimson;
+}
+
+.portfolio h1 {
+	font-weight: 400;
 }
 
 .portfolio hr {
-	border-top-color: powderblue;
-	width: 7rem;
+	border-top-color: crimson;
+	width: 6rem;
+	opacity: 0.3;
 }
 
 .portfolio .button {
@@ -415,23 +424,26 @@ figure {
 
 .experience h1 {
 	margin-top: 0;
-	color: powderblue;
+	color: crimson;
+	font-weight: 400;
 }
 
 .experience hr {
 	width: 25%;
-	border-top: 2px solid powderblue;
+	border-top: 2px solid crimson;
+	opacity: 0.3;
 }
 
 .experience p {
 	text-align: left;
+	font-size: 0.9em;
 }
 
 .experience-text {
-	background-color: #232323;
+	background-color: #0E0E0E;
 	padding: 3em;
 	padding-top: 2.5em;
-	color: white;
+	color: aliceblue;
 }
 
 .experience .button {
@@ -503,26 +515,23 @@ footer img {
 
 /* portfolio.html */
 
-#portfolio-page .home {
+#info-page .home {
 	background-image: inherit;
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	padding: 4em 0;
-	padding-bottom: 2em;
-	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.3);
+	padding-bottom: 1.6em;
+	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
 }
 
-#portfolio-page .home .title {
-	color: black;
+#info-page .home .title {
+	color: white;
 	font-weight: 700;
 }
 
-#portfolio-page .title span {
-	color: black;
-}
-
 @media (max-width: 90rem) {
-	#portfolio-page .home h1 {
+	#info-page .home h1 {
 		padding-top: 3em;
 	}
 }
@@ -530,6 +539,7 @@ footer img {
 .portfolio-cat {
 	padding: 16em;
 	padding-top: 4em;
+	padding-bottom: 6em;
 	color: white;
 }
 
@@ -541,13 +551,33 @@ footer img {
 	font-weight: 700;
 }
 
+.portfolio-cat h2 {
+	font-size: 1.7em;
+}
+
 .portfolio-cat h3 {
 	font-weight: 400;
 }
 
+.portfolio-cat hr {
+	width: 98.8%;
+	border-bottom: 1px solid white;
+	border-top: 0px;
+	height: 1px;
+	align-self: left;
+	margin-left: 0;
+	margin-top: -1em;
+	opacity: 0.3;
+}
+
+#sw hr {
+	border-bottom: 1px solid crimson;
+}
+
 .portfolio-item {
 	overflow: auto;
-	margin-top: 3em;
+	margin-top: 2em;
+	margin-bottom: 4em;
 }
 
 .portfolio-item img {
@@ -557,15 +587,20 @@ footer img {
 	object-fit: cover;
 }
 
-.portfolio-item .portfolio-item-stack {
+.portfolio-item iframe {
 	width: 50%;
-	height: 30vw;
-	padding-right: 0.5em;
-	padding-bottom: 0;
+	height: 19vw;
+	float: left;
+	padding-right: 4em;
+	margin-bottom: 2rem;
+	object-fit: cover;
 }
 
-.portfolio-item-desc {
-	margin-top: 5%;
+.portfolio-item .portfolio-item-stack {
+	width: 50%;
+	height: 22vw;
+	padding-right: 0.5em;
+	padding-bottom: 0;
 }
 
 @media (max-width: 80rem) {
@@ -577,32 +612,37 @@ footer img {
 		width: 50%;
 	}
 	
-	.portfolio-item-desc {
-		margin-top: 0;
+	.portfolio-item iframe {
+		width: 60%;
+		height: 25vw;
 	}
+}
+
+.portfolio-item-desc {
+	text-align: left;
 }
 
 .portfolio-item-desc h3 {
 	font-weight: 700;
-	text-align: left;
+	font-size: 1.5em;
 }
 
 .portfolio-item-desc p {
 	padding-bottom: 2em;
-	text-align: left;
 }
 
 /* art section */
 
 .portfolio-cat .col-sm-4 {
-	width: 32%;
+	width: 32.4%;
 	float: left;
-	margin-right: 0.5em;
+	margin-top: 2em;
+	margin-right: 0.5vw;
 	margin-bottom: 3em;
 }
 
 .portfolio-cat .row img {
-	margin-bottom: 0.3em;
+	margin-bottom: 0.3vw;
 	width: 100%;
 }
 
@@ -614,16 +654,23 @@ footer img {
 }
 
 #sw {
-	background-color: #24282B;
+	background-color: white;
+	color: black;
 }
 
 #eng {
-	background-color: #201C27;
+	background-color: crimson;
+	color: white;
 }
 
 #art {
-	background-color: #1D2436;
+	background-color: #0E0E0E;
 	overflow: auto;
+}
+
+#film {
+	background-color: #FFBC2C;
+	color: black;
 }
 
 @media (max-width: 60rem) {
@@ -639,14 +686,18 @@ footer img {
 	}
 	
 	.portfolio-item iframe {
-		width: 90vw;
+		width: 100%;
 		height: 50vw;
+		padding-right: 0;
+		margin-bottom: 2em;
 	}
 	
 	.portfolio-item .portfolio-item-stack {
 		width: 90vw;
 		height: 50vw;
 		padding-right: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 	
 	.portfolio-cat .col-sm-4 {
@@ -655,3 +706,5 @@ footer img {
 		margin-bottom: 0;
 	}
 }
+
+/* experience.html */
