@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Poppins:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700,900');
 
 * {
 	box-sizing: border-box;
@@ -65,16 +65,17 @@ hr {
 /* typography */
 
 .title {
-	font-size: 1.5rem;
+	font-size: 1.2em;
 	transition: all ease-in-out 250ms;
 }
 
 .title span {
-	font-family: 'Pacifico', cursive;
-	font-size: 2.5rem;
-	font-weight: 400;
-	color: crimson;
+	font-size: 2rem;
+	font-weight: 300;
+	color: white;
 	float: left;
+	text-transform: lowercase;
+	padding-top: 0.8em;
 }
 
 h1 {
@@ -211,13 +212,14 @@ nav a:hover, nav a:focus, .active {
 	}
 	
 	.title {
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	
 	.title span {
 		position: absolute;
 		left: -2em;
 		right: 0;
+		padding-top: 1em;
 	}
 	
 	.menu {
@@ -530,6 +532,10 @@ footer img {
 	font-weight: 700;
 }
 
+#info-page .title span {
+	color: crimson;
+}
+
 @media (max-width: 90rem) {
 	#info-page .home h1 {
 		padding-top: 3em;
@@ -541,9 +547,6 @@ footer img {
 	padding-top: 4em;
 	padding-bottom: 6em;
 	color: white;
-}
-
-.portfolio-cat h1, h2, h3 {
 	text-align: left;
 }
 
@@ -693,11 +696,12 @@ footer img {
 	}
 	
 	.portfolio-item .portfolio-item-stack {
-		width: 90vw;
+		width: 91vw;
 		height: 50vw;
 		padding-right: 0;
 		padding-bottom: 0;
 		margin-bottom: 0;
+		float: inherit;
 	}
 	
 	.portfolio-cat .col-sm-4 {
@@ -708,3 +712,69 @@ footer img {
 }
 
 /* experience.html */
+
+.experience-content {
+	padding: 16em;
+	padding-top: 2em;
+	padding-bottom: 6em;
+}
+
+.experience-content hr {
+	border-bottom: 1px solid crimson;
+	width: 100%;
+	opacity: 0.3;
+}
+
+.experience-item {
+	text-align: left;
+	overflow: auto;
+	margin-bottom: 4em;
+	margin-top: 4em;
+}
+
+.experience-item img {
+	float: left;
+	width: 30%;
+	object-fit: fill;
+	margin-right: 4em;
+	padding-top: 2.5em;
+	margin-bottom: 2em;
+}
+
+.experience-item h2 {
+	font-size: 1.7em;
+}
+
+.experience-item h3 {
+	margin-top: -1em;
+}
+
+.experience-item i {
+	font-weight: 400;
+	font-style: oblique;
+	text-align: right;
+}
+
+.experience-item h4 {
+	margin-top: -1em;
+	font-weight: 400;
+	margin-bottom: 3em;
+}
+
+#ontario {
+	margin-bottom: 3em;
+}
+
+#agf {
+	margin-bottom: 2em;
+}
+
+@media (max-width: 60rem) {
+	.experience-content {
+		padding: 2em;
+	}
+	
+	.experience-item img {
+		display: none;
+	}
+}
