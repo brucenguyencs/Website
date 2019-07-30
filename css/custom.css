@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
-	overflow-x: hidden;
+	overflow: auto;
 }
 
 img {
@@ -25,41 +25,56 @@ hr {
 	padding-bottom: 1em;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
+.col-sm-4 {
+	padding: 0.2em;
+}
+
+#modal-img {
+	max-height: 80vh;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.modal-content {
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+
+.modal-header {
+	padding: 0.5em;
+	border: none;
+}
+
+.modal-body {
+	padding: 0;
+	border: none;
+}
+
+.modal-footer {
+	border: none;
+}
+
+.modal-footer p {
+	width: 100%;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+
+.close {
+	font-weight: 300;
+	font-size: 2em;
+	color: white;
+}
+
 .container {
 	width: 95%;
 	margin: 0 auto;
 	max-width: 70em;
-}
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 500;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-	background-color: white;
-	margin: 10% auto;
-	padding: 2em;
-	width: 80%;
-	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
-}
-
-.modal-close {
-	color: darkgray;
-	float: right;
-	font-size: 2em;
-	opacity: 0.7;
-}
-
-.modal-close:hover, .modal-close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 /* typography */
@@ -115,7 +130,7 @@ h1 {
 	transition: all ease-in-out 250ms;
 }
 
-/* header */
+/* index.html */
 
 header {
 	position: absolute;
@@ -134,7 +149,7 @@ nav {
 	text-align: left;
 	float: right;
 	right: 2em;
-	top: 3em;
+	top: 2.4em;
 	transition: none;
 }
 
@@ -182,12 +197,13 @@ nav a:hover, nav a:focus, .active {
 .sticky {
 	position: fixed;
 	top: 0;
-	left: 0;
-	text-align: right;
-	padding-right: 2em;
-	background-image: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+	right: 0;
 	width: 100%;
-	transition: background-image ease-in-out 250ms;
+	text-align: right;
+	display: block;
+	padding: 0em 3em;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+	z-index: 400;
 }
 
 @media (max-width: 60rem) {
@@ -266,8 +282,6 @@ nav a:hover, nav a:focus, .active {
 	}
 }
 
-/* home */
-
 .home {
 	background-image: url(../img/index/home-bg.jpg);
 	background-size: cover;
@@ -277,11 +291,17 @@ nav a:hover, nav a:focus, .active {
 	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.3);
 }
 
+.home-about {
+	margin-top: -4.2em;
+	padding: 1em;
+	margin-bottom: -1em;
+	background-color: crimson;
+}
+
 .home-about-text {
 	background-color: #0E0E0E;
 	padding: 3em;
 	padding-top: 2.5em;
-	margin-top: -3.2em;
 }
 
 .home-about-text h1 {
@@ -322,7 +342,10 @@ nav a:hover, nav a:focus, .active {
 		background-size: 90%;
 		padding-bottom: 5em;
 		padding-right: 10em;
-		margin-top: 2rem;
+		width: 95%;
+		margin: 0 auto;
+		max-width: 70em;
+		background-color: inherit;
 	}
 	
 	.home-about-text {
@@ -335,12 +358,9 @@ nav a:hover, nav a:focus, .active {
 	}
 }
 
-/* portfolio */
-
 .portfolio {
 	margin: 1em 0;
-	padding: 1em;
-	padding-bottom: 5em;
+	padding: 3em 0em;
 	background-color: #0E0E0E;
 	color: crimson;
 }
@@ -371,6 +391,7 @@ nav a:hover, nav a:focus, .active {
 	object-fit: cover;
 	width: 800px;
 	height: 400px;
+	transition: none;
 }
 
 .portfolio-desc {
@@ -428,10 +449,10 @@ figure {
 	margin: 0;
 }
 
-/* experience */
-
 .experience {
-	margin-top: 1em;
+	margin-top: -1em;
+	padding: 1em;
+	background-color: crimson;
 }
 
 .experience h1 {
@@ -469,8 +490,10 @@ figure {
 		background-position: center;
 		background-size: 90%;
 		height: 40em;
-		margin: 4em;
-		margin-top: 2em;
+		width: 95%;
+		margin: 3em auto;
+		max-width: 70em;
+		background-color: inherit;
 	}
 	
 	.experience-text {
@@ -482,17 +505,17 @@ figure {
 	}
 }
 
-/* cta */
-
 .cta {
-	margin-top: 1em;
 	background-color: #232323;
 	padding: 2em 0;
-	padding-bottom: 4em;
+	padding-bottom: 3.5em;
 	color: #FFF;
 }
 
-/* footer */
+.cta h1 {
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
 
 footer {
 	padding: 1em;
@@ -501,13 +524,14 @@ footer {
 }
 
 footer nav {
-	margin-bottom: 3rem;
+	margin-bottom: 4em;
 	z-index: 100;
 	overflow: auto;
 }
 
 footer p {
-	margin-bottom: 0;
+	margin-bottom: -1em;
+	margin-top: 1em;
 }
 
 footer nav li {
@@ -524,6 +548,7 @@ footer img {
 		float: inherit;
 		position: inherit;
 		text-align: center;
+		margin-bottom: 2em;
 	}
 	
 	footer p {
@@ -541,13 +566,14 @@ footer img {
 	background-size: cover;
 	background-position: center;
 	padding: 4em 0;
-	padding-bottom: 1.6em;
+	padding-bottom: 3em;
 	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
 }
 
 #info-page .home .title {
 	color: white;
 	font-weight: 700;
+	padding-top: 0.3em;
 }
 
 #info-page .title span {
@@ -556,28 +582,32 @@ footer img {
 
 @media (max-width: 90rem) {
 	#info-page .home h1 {
-		padding-top: 3em;
+		margin-top: 3em;
 	}
 }
 
 .portfolio-cat {
-	padding: 16em;
-	padding-top: 4em;
-	padding-bottom: 6em;
+	padding: 6em 16em;
 	color: white;
 	text-align: left;
 }
 
 .portfolio-cat h1 {
 	font-weight: 700;
+	padding-bottom: 0.5em;
 }
 
 .portfolio-cat h2 {
+	font-weight: 700;
 	font-size: 1.7em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .portfolio-cat h3 {
 	font-weight: 400;
+	font-size: 1.2em;
+	padding-bottom: 1em;
 }
 
 .portfolio-cat hr {
@@ -655,24 +685,16 @@ footer img {
 
 /* art section */
 
-.portfolio-cat .col-sm-4 {
-	width: 32.4%;
-	float: left;
-	margin-top: 2em;
-	margin-right: 0.5vw;
-	margin-bottom: 3em;
-}
-
 .portfolio-cat .row img {
-	margin-bottom: 0.3vw;
+	margin-bottom: 0.5em;
 	width: 100%;
+	cursor: zoom-in;
 }
 
 #art img:hover {
 	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
 	opacity: 0.7;
-	transition: opacity ease-in-out 250ms;	
-	transition: box-shadow ease-in-out 250ms;
+	transition: 250ms;
 }
 
 #sw {
@@ -695,8 +717,16 @@ footer img {
 }
 
 @media (max-width: 60rem) {
+	#info-page .home h1 {
+		margin-top: 4em;
+	}
+	
 	.portfolio-cat {
-		padding: 2em;
+		padding: 4em 2em;
+	}
+	
+	.portfolio-item h3 {
+		padding-top: 1em;
 	}
 	
 	.portfolio-item img {
@@ -709,8 +739,7 @@ footer img {
 	.portfolio-item iframe {
 		width: 100%;
 		height: 50vw;
-		padding-right: 0;
-		margin-bottom: 2em;
+		margin: 0.5em 0em;
 	}
 	
 	.portfolio-item .portfolio-item-stack {
@@ -756,15 +785,19 @@ footer img {
 	object-fit: fill;
 	margin-right: 4em;
 	padding-top: 2.5em;
-	margin-bottom: 4em;
+	margin-bottom: 3em;
 }
 
 .experience-item h2 {
-	font-size: 1.7em;
+	margin-top: 1em;
+	font-size: 2em;
+	font-weight: 700;
 }
 
 .experience-item h3 {
-	margin-top: -1em;
+	margin-top: 0em;
+	font-size: 1.3em;
+	font-weight: 700;
 }
 
 .experience-item i {
@@ -774,7 +807,8 @@ footer img {
 }
 
 .experience-item h4 {
-	margin-top: -1em;
+	margin-top: 0em;
+	font-size: 1em;
 	font-weight: 400;
 	margin-bottom: 3em;
 }
@@ -782,6 +816,7 @@ footer img {
 @media (max-width: 60rem) {
 	.experience-content {
 		padding: 2em;
+		margin-top: -4em;
 	}
 	
 	.experience-item img {
@@ -793,6 +828,10 @@ footer img {
 
 #contact-page .home {
 	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../img/contact/bg.jpg);
+}
+
+#contact-page footer p {
+	margin-bottom: 1em;
 }
 
 .contact-content {
@@ -820,7 +859,7 @@ footer img {
 	margin-bottom: 2em;
 	border-radius: 1em;
 	overflow: hidden;
-	transition: transform ease-in-out 500ms;
+	transition: transform ease-in-out 400ms;
 }
 
 .contact-item img {
@@ -828,7 +867,7 @@ footer img {
 	width: 60%;
 	height: 100%;
 	margin: auto;
-	transition: all ease-in-out 500ms;
+	transition: all ease-in-out 400ms;
 }
 
 .contact-item figcaption {
@@ -836,9 +875,16 @@ footer img {
 	transition: transform ease-in 250ms;
 }
 
+.contact-item h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+	padding: 0.8em 0em;
+}
+
 .contact-item h3 {
 	font-weight: 400;
 	margin-top: -1em;
+	padding-bottom: 0.5em;
 	font-size: 0.8em;
 }
 
@@ -855,7 +901,7 @@ footer img {
 	
 	.contact-item:hover figcaption {
 		transform: translateY(0%);
-		transition: transform ease-out 500ms;
+		transition: transform ease-out 400ms;
 	}
 }
 

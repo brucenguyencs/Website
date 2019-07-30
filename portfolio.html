@@ -12,19 +12,19 @@ Created May 9th, 2019
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Bruce Nguyen</title>
-		
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		
-		<link href="css\styles.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="css\custom.css" rel="stylesheet" type="text/css">
 		
 		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="js/app.js"></script>
-
 	</head>
 	
 	<body id="info-page">
-		<a name="top"></a>
 		<header>
+			<a name="top"></a>
 			<h1 class="title"><span>Bruce Nguyen</span></h1>
 			<nav class="navbar">
 				<ul class="nav-links">
@@ -44,14 +44,32 @@ Created May 9th, 2019
 			</div>
 		</header>
 		
+		<div class="modal fade" id="modal-image" tabIndex="-1" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span>&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<img id="modal-img">
+					</div>
+					<div class="modal-footer">
+						<p id="modal-caption"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<section class="home">
 			<div class="container">
 				<h1 class="title">Portfolio</h1>
 			</div>
 		</section>
 		
-		<a name="software"></a>
 		<section class="portfolio-cat" id="sw">
+			<a name="software"></a>
 			<h1>Software Projects</h1>
 			<h3>Projects that involve software development.</h3>
 			<hr>
@@ -82,8 +100,8 @@ Created May 9th, 2019
 			</figure>
 		</section>
 		
-		<a name="engineering"></a>
 		<section class="portfolio-cat" id="eng">
+			<a name="engineering"></a>
 			<h1>Engineering Projects</h1>
 			<h3>Projects that utilize engineering principles and skills.</h3>
 			<hr>
@@ -134,31 +152,32 @@ Created May 9th, 2019
 			</figure>
 		</section>
 		
-		<a name="art"></a>
 		<section class="portfolio-cat" id="art">
+			<a name="art"></a>
 			<h1>Art &amp; Design</h1>
 			<h3>Works regarding visual art and graphics design.</h3>
 			<hr>
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="img/portfolio/caravaggio.jpg" alt="St. Jerome Writing (reproduction), oil on canvas, 2016" data-toggle="modal" data-target="#modal-image">
+					<img src="img/portfolio/bvs-poster.jpg" alt="Batman v Superman Fan Poster, digital, 2016" data-toggle="modal" data-target="#modal-image">
+					<img src="img/portfolio/magazine2.jpg" alt="GQ Magazine Mock Up, digital, 2016" data-toggle="modal" data-target="#modal-image">
+				</div>
 
-			<div class="col-sm-4">
-				<div class="row"><img id="modal-open" src="img/portfolio/caravaggio.jpg" alt="St. Jerome Writing"></div>
-				<div class="row"><img src="img/portfolio/bvs-poster.jpg" alt="Batman v Superman (2016) fan poster"></div>
-				<div class="row"><img src="img/portfolio/magazine2.jpg" alt="Mock GQ design"></div>
-			</div>
-					
-			<div class="col-sm-4">
-				<div class="row"><img src="img/portfolio/robot-poster.jpg" alt="Mr. Robot fan poster"></div>
-				<div class="row"><img src="img/portfolio/rey.jpg" alt="Rey, graphite"></div>
-			</div>
-					
-			<div class="col-sm-4">
-				<div class="row"><img src="img/portfolio/magazine1.jpg" alt="Mock Entertainment Weekly design"></div>
-				<div class="row"><img src="img/portfolio/presskit.jpg" alt="Press-kit cover for Mr. Robot"></div>
+				<div class="col-sm-4">
+					<img src="img/portfolio/robot-poster.jpg" alt="Mr. Robot Season 3 Fan Poster, digital, 2016" data-toggle="modal" data-target="#modal-image">
+					<img src="img/portfolio/rey.jpg" alt="Rey, graphite, 2016" data-toggle="modal" data-target="#modal-image">
+				</div>
+
+				<div class="col-sm-4">
+					<img src="img/portfolio/magazine1.jpg" alt="Entertainment Weekly Mock Up, digital, 2016" data-toggle="modal" data-target="#modal-image">
+					<img src="img/portfolio/presskit.jpg" alt="Mr. Robot Press-Kit Cover, digital, 2016" data-toggle="modal" data-target="#modal-image">
+				</div>
 			</div>
 		</section>
 		
-		<a name="film"></a>
 		<section class="portfolio-cat" id="film">
+			<a name="film"></a>
 			<h1>Film Projects</h1>
 			<h3>Videography and film-related projects.</h3>
 			<hr>

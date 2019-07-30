@@ -1,7 +1,7 @@
 // Scrolling navigation bar
 
 $(window).scroll(function() {
-	if ($(this).scrollTop() > 63 && $(window).width() >= 960) {
+	if ($(this).scrollTop() > 57 && $(window).width() >= 960) {
 		$('.navbar').addClass("sticky");
 	}
 	else {
@@ -18,30 +18,12 @@ function navSlide() {
 	menu.classList.toggle('menu-toggle');
 }
 
-// Modal
+// Image modal
 
-function modal() {
-	var modal = document.getElementById('modal');
-	var modalOpen = document.getElementById('modal-open');
-	var modalClose = document.getElementById('modal-close');
+$(document).on('show.bs.modal', '#modal-image', function(event) {
+	var image = $(event.relatedTarget).attr('src');
+	var caption = $(event.relatedTarget).attr('alt');
 	
-	modalOpen.addEventListener('click', openModal(modal));
-	modalClose.addEventListener('click', closeModal(modal));
-	window.addEventListener('click', outsideClick);
-}
-
-function openModal(modal) {
-	modal.style.display = 'block';
-}
-
-function closeModal(modal) {
-	modal.style.display = 'none';
-}
-
-function outsideClick(e) {
-	if (e.target == modal) {
-		modal.style.display = 'none';
-	}
-}
-
-modal();
+	$('#modal-img').attr('src', image);
+	$('#modal-caption').text(caption);
+});
