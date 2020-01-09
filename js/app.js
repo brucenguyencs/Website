@@ -3,8 +3,7 @@
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 57 && $(window).width() >= 960) {
 		$('.navbar').addClass("sticky");
-	}
-	else {
+	} else {
 		$('.navbar').removeClass("sticky");
 	}
 })
@@ -27,3 +26,16 @@ $(document).on('show.bs.modal', '#modal-image', function(event) {
 	$('#modal-img').attr('src', image);
 	$('#modal-caption').text(caption);
 });
+
+// Parallax
+
+$(window).scroll(function() {
+	parallax();
+});
+
+function parallax() {
+	var wScroll = $(window).scrollTop();
+	if ($(window).width() >= 960) {
+		$('.parallax-bg').css('background-position', 'center ' + (wScroll * 0.5) + 'px');
+	}
+}

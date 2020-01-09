@@ -77,6 +77,10 @@ a:hover {
 	max-width: 70em;
 }
 
+.parallax-bg, .parallax {
+	transition: initial;
+}
+
 /* typography */
 
 .title {
@@ -285,23 +289,53 @@ nav a:hover, nav a:focus, .active {
 .home {
 	background-image: url(../img/index/home-bg.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: center 0px;
 	padding: 12em 0;
 	color: white;
 	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.3);
 }
 
 .home-about {
-	margin-top: -4.2em;
-	padding: 1em;
-	margin-bottom: -1em;
-	background-color: crimson;
+	padding: 0em 1em;
+	align: center;
+}
+
+.home-about-img {
+	width: 50%;
+	margin: 0em;
+	margin-left: 20em;
+	margin-top: 0em;
+	margin-bottom: 0em;
 }
 
 .home-about-text {
 	background-color: #0E0E0E;
+	position: relative;
+	width: 40%;
+	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
+	margin-top: -30em;
+	margin-bottom: 5vw;
+	left: 50%;
+	transform: translateX(-100%);
 	padding: 3em;
-	padding-top: 2.5em;
+}
+
+@media (max-width: 60rem) {
+	.home-about-img {
+		width: 100%;
+		margin-top: -2em;
+		margin-bottom: 1em;
+		margin-left: 0em;
+	}
+
+	.home-about-text {
+		position: inherit;
+		margin-top: 0em;
+		margin-bottom: 1em;
+		left: 0%;
+		transform: translateX(0%);
+		width: 100%;
+	}
 }
 
 .home-about-text h1 {
@@ -334,34 +368,10 @@ nav a:hover, nav a:focus, .active {
 	opacity: 0.3;
 }
 
-@media (min-width: 60rem) {
-	.home-about {
-		background-image: url("../img/index/aboutme.jpg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 90%;
-		padding-bottom: 5em;
-		padding-right: 10em;
-		width: 95%;
-		margin: 0 auto;
-		max-width: 70em;
-		background-color: inherit;
-	}
-	
-	.home-about-text {
-		position: relative;
-		width: 50%;
-		box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
-		top: -0.3em;
-		left: -1em;
-		margin-top: 0;
-	}
-}
-
 .portfolio {
-	margin: 1em 0;
-	padding: 3em 0em;
-	background-color: #0E0E0E;
+	margin: 0;
+	padding: 3em 0.5em;
+	background-color: black;
 	color: crimson;
 }
 
@@ -381,6 +391,7 @@ nav a:hover, nav a:focus, .active {
 
 .portfolio-section {
 	margin: 0;
+	padding: 0.5em;
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
@@ -450,9 +461,44 @@ figure {
 }
 
 .experience {
-	margin-top: -1em;
-	padding: 1em;
-	background-color: crimson;
+	background-image: url("../img/index/experience-bg.JPG");
+	background-repeat: no-repeat;
+	background-position: center -120px;
+	background-size: 90%;
+	height: 40em;
+	width: 50em;
+	margin: 3em auto;
+	background-color: inherit;
+}
+
+.experience-text {
+	background-color: #0E0E0E;
+	color: aliceblue;
+	padding: 3em;
+	position: relative;
+	width: 50%;
+	box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
+	left: 50%;
+	transform: translateX(10%);
+	bottom: -16em;
+}	
+
+@media (max-width: 60rem) {
+	.experience {
+		background-image: none;
+		margin: 0em 0em;
+		padding: 1em;
+		height: inherit;
+		width: 100%;
+		background-color: crimson;
+	}
+	
+	.experience-text {
+		padding-top: 2.5em;
+		width: 100%;
+		position: inherit;
+		transform: translateX(0%);
+	}
 }
 
 .experience h1 {
@@ -472,41 +518,12 @@ figure {
 	font-size: 0.9em;
 }
 
-.experience-text {
-	background-color: #0E0E0E;
-	padding: 3em;
-	padding-top: 2.5em;
-	color: aliceblue;
-}
-
 .experience .button {
 	margin-top: 1em;
 }
 
-@media (min-width: 60rem) {
-	.experience {
-		background-image: url("../img/index/experience-bg.JPG");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 90%;
-		height: 40em;
-		width: 95%;
-		margin: 3em auto;
-		max-width: 70em;
-		background-color: inherit;
-	}
-	
-	.experience-text {
-		position: relative;
-		width: 50%;
-		box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.4);
-		left: -2em;
-		bottom: -12em;
-	}
-}
-
 .cta {
-	background-color: #232323;
+	background-color: black;
 	padding: 2em 0;
 	padding-bottom: 3.5em;
 	color: #FFF;
@@ -820,7 +837,9 @@ footer img {
 	}
 	
 	.experience-item img {
-		display: none;
+		float: inherit;
+		width: 50%;
+		margin-bottom: 1em;
 	}
 }
 
