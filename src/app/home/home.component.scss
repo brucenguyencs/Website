@@ -1,0 +1,223 @@
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: black;
+}
+
+.banner p {
+    font-size: 1.4em;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    position: relative;
+    max-width: 30em;
+    top: 45%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 60rem) {
+    .banner p {
+        max-width: none;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 2em;
+    }
+}
+
+.banner .arrow-down {
+    background-image: url(https://www.iconninja.com/files/62/1016/62/down-arrow-icon.png);
+    background-size: 4em 4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 4em;
+    bottom: 1em;
+    filter: brightness(0) invert(1);
+}
+
+/* Parallax portraits */
+
+.portrait {
+    padding: 2em;
+}
+
+.portrait img {
+    position: absolute;
+    object-fit: cover;
+    max-width: 25%;
+    height: 30vw;
+    z-index: 100;
+}
+
+#portrait1 {
+    left: 15%;
+    top: 110%;
+}
+
+#portrait2 {
+    right: 15%;
+    top: 150%;
+}
+
+#portrait3 {
+    left: 37.5%;
+    top: 130%;
+}
+
+@media (max-width: 60rem) {
+    .portrait {
+        height: auto;
+        padding: 0 4em;
+    }
+
+    .portrait img {
+        position: relative;
+        object-fit: cover;
+        max-width: 100%;
+        height: 80vw;
+        border-radius: 2em;
+    }
+
+    #portrait1 {
+        left: 0;
+        top: 0;
+    }
+
+    #portrait2 {
+        display: none;
+    }
+
+    #portrait3 {
+        display: none;
+    }
+}
+
+/* Portfolio preview */
+
+.portfolio {
+    padding: 15em 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio p {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-left: 4em;
+}
+
+.hyperlink {
+    font-size: 0.7em;
+    font-weight: 400;
+    text-decoration: none;
+    color: moccasin;
+
+    &:hover {
+        color: darken(moccasin, 10%);
+    }
+}
+
+.portfolio-preview {
+    max-width: 30vw;
+    overflow: hidden;
+    border-radius: 2em;
+}
+
+.portfolio-preview img {
+	display: block;
+    object-fit: cover;
+    max-width: 30vw;
+    height: 40vw;
+}
+
+@media (max-width: 60rem) {
+    .portfolio {
+        display: block;
+        padding: 8em 4em;
+    }
+    
+    .portfolio-preview {
+        width: 100%;
+        max-width: none;
+        overflow: hidden;
+    }
+
+    .portfolio-preview img {
+        width: 100%;
+        max-width: none;
+        height: 80vw;
+    }
+
+    .portfolio p {
+        margin: 2em 0 0 0;
+    }
+}
+
+/* Experience */
+
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12em 0em;
+}
+
+.experience img {
+    width: 8em;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-left: 4em;
+}
+
+.experience p {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+@media (max-width: 60rem) {
+    .experience {
+        display: block;
+        padding: 8em 4em;
+        align-content: center;
+    }
+
+    .experience img {
+        display: block;
+        width: 5em;
+        margin: auto;
+        margin-bottom: 8em;
+    }
+
+    .experience p {
+        margin: 0;
+    }
+}
+
+/* Call to action */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12em;
+}
+
+.contact a {
+    font-size: 3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: color ease-in-out 250ms;
+
+    &:hover {
+        color: Moccasin;
+    }
+}
