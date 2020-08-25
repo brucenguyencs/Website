@@ -7,15 +7,15 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '' }
+  { path: '', component: HomeComponent, data: {state: 'home'} },
+  { path: 'portfolio', component: PortfolioComponent, data: {state: 'portfolio'} },
+  { path: 'experience', component: ExperienceComponent, data: {state: 'experience'} },
+  { path: 'contact', component: ContactComponent, data: {state: 'contact'} },
+  { path: '**', redirectTo: '', data: {state: 'home'} }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
