@@ -35,13 +35,3 @@ function parallax() {
     }
   }
 }
-
-function getOffset(elem: HTMLElement) {
-  var offset = 0;
-  do {
-    if (!isNaN(elem.offsetTop)) {
-      offset += elem.offsetTop;
-    }
-  } while (elem = (elem.offsetParent as HTMLElement));
-  return offset;
-}

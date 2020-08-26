@@ -35,7 +35,7 @@ nav {
 
 @media (max-width: 60rem) {
     footer {
-        padding: 1em;
+        padding: 1em 0;
     }
 
     p {
@@ -47,5 +47,19 @@ nav {
         float: inherit;
         text-align: center;
         padding-right: 2em;
+    }
+}
+
+@media (min-width: 150rem) {
+    footer {
+        padding: 4em 16em;
+    }
+    
+    img {
+        width: 4em;
+    }
+
+    li {
+        margin: 0 2em;
     }
 }

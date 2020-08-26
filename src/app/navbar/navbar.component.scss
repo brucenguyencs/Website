@@ -169,3 +169,33 @@ nav a {
 		right: 1em;
 	}
 }
+
+@media (min-width: 150rem) {
+	.title {
+		font-size: 4em;
+	}
+
+	header {
+		padding: 2em 16em 0 16em;
+	}
+
+	nav li {
+		padding: 2em 0 0 4em;
+		display: inline-block;
+	}
+
+	nav a {
+		font-size: 1.6em;
+	}
+
+	.sticky {
+		padding: 0 16em 0 16em;
+	}
+
+	.arrow-up {
+		width: 10em;
+		height: 10em;
+		bottom: 4em;
+		right: 6em;
+	}
+}
