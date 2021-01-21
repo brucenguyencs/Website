@@ -25,8 +25,10 @@ function parallax() {
   if (window.outerWidth >= 960) {
     for (var i = 0; i < obj.length; i++) {
       var elem:HTMLElement = obj[i] as HTMLElement;
-      var offset = window.pageYOffset * parseFloat(elem.dataset.speed);
-      elem.style.transform = 'translate3d(0px, ' + offset + 'px, 0px)';
+      if (elem.dataset.speed != undefined) {
+        var offset = window.pageYOffset * parseFloat(elem.dataset.speed);
+        elem.style.transform = 'translate3d(0px, ' + offset + 'px, 0px)';
+      }
     }
   } else {
     for (var i = 0; i < obj.length; i++) {

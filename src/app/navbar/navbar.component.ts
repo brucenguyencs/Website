@@ -17,8 +17,8 @@ export class NavbarComponent implements OnInit {
   navToggle() {
     var nav = document.querySelector('.nav-mobile');
     var links = document.querySelector('.nav-links');
-    nav.classList.toggle('nav-active');
-    links.classList.toggle('nav-active');
+    if (nav != null) nav.classList.toggle('nav-active');
+    if (links != null) links.classList.toggle('nav-active');
   }
 
   @HostListener('window:scroll', ['$event'])
