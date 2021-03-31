@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     color: white;
-    background: linear-gradient(to bottom, transparent , black), black url(../../assets/home/banner.jpg) no-repeat center;
+    background: linear-gradient(to bottom, transparent , black), black url(../../assets/home/banner.jpg) no-repeat center fixed;
     background-size: cover;
 }
 
@@ -59,74 +59,62 @@
     }
 }
 
-/* Parallax portraits */
-
-.portrait {
-    padding: 2em;
+/* About */
+.about {
+    color: white;
+    padding: 8em 0 16em 0;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.portrait img {
-    border-radius: 0.5em;
-    position: absolute;
+.about p {
+    margin-right: 5em;
+    overflow-wrap: break-word;
+    max-width: 30em;
+    font-size: 1.1em;
+}
+
+.about img {
+    border-radius: 50%;
     object-fit: cover;
-    max-width: 25%;
-    height: 30vw;
-    z-index: 100;
+    max-width: 20vw;
+    height: 20vw;
 }
 
-#portrait1 {
-    left: 15%;
-    top: 110%;
-}
-
-#portrait2 {
-    right: 15%;
-    top: 150%;
-}
-
-#portrait3 {
-    left: 37.5%;
-    top: 130%;
-}
-
-@media (max-width: 60rem) {
-    .portrait {
-        height: auto;
-        padding: 0 4em;
+@media(max-width: 60rem) {
+    .about {
+        display:block;
+        padding: 8em 4em 16em 4em;
+        text-align: center;
     }
 
-    .portrait img {
-        position: relative;
-        object-fit: cover;
+    .about img {
+        max-width: 80%;
+        height: 70vw;
+    }
+
+    .about p {
         max-width: 100%;
-        height: 80vw;
-        border-radius: 2em;
-    }
-
-    #portrait1 {
-        left: 0;
-        top: 0;
-    }
-
-    #portrait2 {
-        display: none;
-    }
-
-    #portrait3 {
-        display: none;
+        margin-right: 0;
+        text-align: left;
     }
 }
 
-@media(max-width: 100rem) {
-    #portrait1 {
-        top: 120%;
+@media(min-width: 150rem) {
+    .about {
+        padding: 16em 0 32em 0;
+    }
+
+    .about p {
+        font-size: 2.5em;
     }
 }
 
 /* Portfolio preview */
 
 .portfolio {
-    padding: 15em 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,8 +127,11 @@
     margin-left: 4em;
 }
 
-.hyperlink {
+.portfolio a {
     font-size: 0.7em;
+}
+
+.hyperlink {
     font-weight: 400;
     text-decoration: none;
     color: moccasin;
@@ -186,6 +177,10 @@
 }
 
 @media (min-width: 150rem) {
+    .portfolio {
+        padding: 16em 8em;
+    }
+
     .portfolio p {
         font-size: 3em;
     }
@@ -197,7 +192,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16em 8em;
+    padding: 16em 8em 0em 8em;
 }
 
 .experience img {
@@ -244,7 +239,7 @@
 .contact {
     display: flex;
     justify-content: center;
-    padding: 0 4em 12em 4em;
+    padding: 16em 4em 12em 4em;
 }
 
 .contact a {
