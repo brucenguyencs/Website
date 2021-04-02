@@ -26,10 +26,10 @@ li {
     display: inline-block;
     filter: brightness(0) invert(1);
     transition: all ease-in-out 100ms;
-}
-
-li:hover {
-    transform: scale(1.1);
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 nav {
