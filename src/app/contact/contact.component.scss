@@ -1,6 +1,7 @@
 .banner ul {
 	padding-top: 12em;
 	list-style: none;
+	width: 10em;
 }
 
 .banner li {
@@ -35,10 +36,11 @@
     font-size: 2em;
     font-weight: 600;
 	position: fixed;
-	bottom: 0em;
-	left: 4em;
+	top: 6em;
+	right: 0em;
     mix-blend-mode: difference;
 	opacity: 0;
+	writing-mode: vertical-lr;
 	transition: opacity ease-in-out 250ms;
 }
 
@@ -92,6 +94,7 @@
 		bottom: 2.34em;
 		mix-blend-mode: normal;
 		z-index: -1;
+		writing-mode: horizontal-tb;
 		transition: opacity ease-in-out 250ms;
 	}
 
@@ -118,7 +121,7 @@
 	}
 
 	.banner p {
-		left: 8em;
+		font-size: 4em;
 	}
 
 	.contact-image {
